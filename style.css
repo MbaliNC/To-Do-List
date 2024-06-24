@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Shadows Into Light", cursive;
+}
+
+body {
+  background-image: url(todolist.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 50%;
+  height: 50%;
+  text-transform: capitalize;
+  /*min-height: 100vh;
+  padding: 10px;*/
+}
+
+.container .header {
+  padding: 15px 40px 30px;
+  color: #ffffff;
+  text-align: center;
+  background-color: rgb(202, 108, 108);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.container .header h2 {
+  margin: 12px;
+  font-size: 40px;
+}
+
+.header input {
+  width: 75%;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  float: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.header button {
+  width: 25%;
+  padding: 10px;
+  float: left;
+  background-color: #d9d9d9;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+button:hover {
+  background-color: #ff69b4;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.container .header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.taskList {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+ul {
+  list-style-type: none;
+  border-radius: 5px;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  background-color: #d9d9d9;
+  padding: 12px 8px 20px 40px;
+  font-size: 20px;
+  user-select: none;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+ul li:hover {
+  background-color: #fff0f5;
+}
+
+ul li .closebutton {
+  display: none;
+  position: absolute;
+  right: 15px;
+}
+
+ul li:hover .closebutton {
+  display: inline-block;
+}
+
+ul li .closebutton i:hover {
+  color: #ec1d1d;
+}
+
+ul li.done {
+  background-color: #ff69b4;
+  color: #ffffff;
+  text-decoration: line-through;
+}
+
+ul li.done::before {
+  content: "";
+  width: 8px;
+  height: 16px;
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  border-width: 0px 2px 2px 0px;
+  border-style: solid;
+  border-color: white;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 600px) {
+  .container .header {
+    background-color: #1ec1f3;
+  }
+
+  .header input {
+    width: 100%;
+  }
+
+  .button-container button {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    text-align: center;
+  }
+
+  .container .header h2 {
+    text-align: center;
+  }
+}
